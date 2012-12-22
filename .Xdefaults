@@ -1,0 +1,211 @@
+Xft.dpi:                    96
+Xft.antialias:           true
+Xft.hinting:              full
+Xft.hintstyle:           hintslight
+Xft.rgba:                  rgb
+
+c64*font:                xft:Adore64:autohint=false:antialias=false:size=12
+c64*background:          #3a319c
+c64*foreground:          #7b71d6
+
+xterm*title:             xterm
+xterm*faceName:          terminus:pixelsize=12
+!xterm*faceName:          cure:Regular
+!xterm*boldfaceName:      cure:Regular
+!xterm*faceName:          Pragmata
+!xterm*faceSize:          8.7
+!xterm*boldfaceName:      Pragmata
+xterm*geometry:          100x30
+!xterm*boldMode:          false
+xterm*cutNewline:        false
+xterm*on4Clicks:         group
+xterm*on5Clicks:         page
+xterm*internalBorder:    1
+xterm*background:        #262729
+xterm*foreground:        light grey
+xterm*metaSendsEscape:   true
+xterm*colorBD:           #ffffff
+xterm*colorBDMode:       false
+xterm*cursorBlink:       false
+xterm*cursorColor:       #e2baf1
+!xterm*veryBoldColors:    14
+xterm*dynamiccolors: true
+xterm*utf8: 1
+xterm*loginShell:        true
+xterm*charClass:         33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
+xterm*jumpScroll:        true
+xterm*multiScroll:       true
+xterm*saveLines:         512
+
+!URxvt*font:              -*-proggytiny-*-*-*-*-*-*-*-*-*-*-iso8859-*
+!URxvt*boldFont:          -*-proggytiny-*-*-*-*-*-*-*-*-*-*-iso8859-*
+!URxvt*font:              -*-dina-medium-r-*-*-*-*-*-*-*-*-microsoft-cp1252
+!URxvt*font:               -windows-dina-medium-r-normal--13-80-96-96-c-70-iso8859-1
+!urxvt.font:              xft:terminus:pixelsize=7
+!urxvt*boldFont:          xft:terminus:pixelsize=7
+!urxvt.font:              xft:Dina:pixelsize=10
+!urxvt*boldFont:          xft:Dina:pixelsize=10
+urxvt.font:              xft:profont:pixelsize=11
+urxvt*boldFont:          xft:profont:pixelsize=11
+!URxvt*font:              -proggytiny-*-*-*-*-10-*-*-*-*-*-*-*
+!urxvt*boldFont:          -proggytiny-*-*-*-*-10-*-*-*-*-*-*-*
+!urxvt.font:              xft:proggytiny:pixelsize=10
+!urxvt*boldFont:          xft:proggytiny:pixelsize=10
+urxvt.termName:          xterm
+urxvt.scrollBar:         false
+!urxvt.backgroundPixmap:  /home/vermaden/.themes/urxvt.back.xpm
+urxvt.imLocale:          en_US.UTF-8
+!urxvt.imLocale:          ja_JP.UTF-8
+urxvt.loginShell:        true
+urxvt.saveLines:         512
+!urxvt.geometry:          100x30
+urxvt.boldMode:          false
+urxvt.inheritPixmap:     false
+urxvt.shading:           40
+urxvt.xftAntialias:      false
+urxvt.jumpScroll:        true
+urxvt.tintColor:         white
+urxvt.internalBorder:    0
+urxvt.cursorBlink:       false
+!urxvt.cursorColor:       #E2BAF1
+urxvt.cursorColor:       #bf7a29
+urxvt.cursorColor2:      #000000
+!urxvt.background:        #46423b
+!urxvt.foreground:        #978f83
+urxvt.colorBD:           #ffffff
+urxvt.colorIT:           #bbbbbb
+urxvt.colorUL:           #999999
+urxvt.underlineColor:    #999999
+urxvt.borderless:        true 
+
+rxvt*font:*-*-fixed-medium-r-normal--*-110-*-*-*-*-iso8859-1
+rxvt*boldFont:*-*-fixed-medium-r-normal--*-110-*-*-*-*-iso8859-1
+!urxvt.font:              xft:Inconsolata:size=9
+!urxvt*boldFont:          xft:Inconsolata:size=9
+!urxvt.font:              xft:montecarlo:pixelsize=7
+!urxvt*boldFont:          xft:montecarlo:pixelsize=7
+!urxvt.font:              xft:profont:pixelsize=12
+!urxvt*boldFont:          xft:profont:pixelsize=12
+rxvt.termName:          rxvt
+rxvt.scrollBar:         false
+!urxvt.backgroundPixmap:  /home/vermaden/.themes/urxvt.back.xpm
+rxvt.imLocale:          en_US.UTF-8
+!rxvt.imLocale:          ja_JP.UTF-8
+rxvt.loginShell:        true
+rxvt.saveLines:         512
+rxvt.geometry:          100x30
+rxvt.boldMode:          false
+!urxvt.inheritPixmap:     false
+!urxvt.shading:           15
+rxvt.xftAntialias:      false
+rxvt.jumpScroll:        true
+!rxvt.tintColor:         white
+rxvt.internalBorder:    0
+rxvt.cursorBlink:       false
+rxvt.cursorColor:       #E2BAF1
+rxvt.cursorColor2:      #000000
+rxvt.background:        #262626
+rxvt.foreground:        #686868
+rxvt.colorBD:           #ffffff
+rxvt.colorIT:           #bbbbbb
+rxvt.colorUL:           #999999
+rxvt.underlineColor:    #999999
+rxvt.borderless:        true
+
+*background:        #211708
+*foreground:        #978f83
+
+! mikado colors
+!black
+*color0:    #322a2c
+*color8:    #46423b
+!red
+*color1:    #a04363
+*color9:    #ae837a
+!green
+*color2:    #9b9329
+*color10:   #b4aa30
+!yellow
+!*color3:    #c77920
+*color3:    #bf7a29
+*color11:   #c7a551
+!blue
+*color4:    #6a8c8c
+*color12:   #74999e
+!magenta
+*color5:    #856774
+*color13:   #9c818e
+!cyan
+*color6:    #757978
+*color14:   #9fa590
+!white
+*color7:    #bcbcaf
+*color15:   #c1c4bc
+
+xclock*hourColor:     rgb:0/0/0
+xclock*minuteColor:   rgb:8/8/8
+xclock*secondColor:   rgb:b/b/b
+xclock*majorColor:    rgb:0/0/0
+xclock*minorColor:    rgb:6/6/6
+
+xcalc*ti.button1.vertDistance:          4
+xcalc*ti.button2.vertDistance:          4
+xcalc*ti.button3.vertDistance:          4
+xcalc*ti.button4.vertDistance:          4
+xcalc*ti.button5.vertDistance:          4
+xcalc*ti.background:                    gray90
+xcalc*ti.bevel.borderColor:             gray65
+xcalc*ti.bevel.borderWidth:             1
+xcalc*ti.bevel.vertDistance:            4
+xcalc*ti.bevel.defaultDistance:         0
+xcalc*ti.bevel.background:              rgb:b/c/b
+xcalc*ti.bevel.screen*background:       rgb:b/c/b
+xcalc*ti.bevel.screen.borderColor:      rgb:b/c/b
+xcalc*ti.bevel.screen.vertDistance:     10
+xcalc*ti.bevel.screen.horizDistance:    10
+xcalc*ti.bevel.screen*left:             chainLeft
+xcalc*ti.bevel.screen*right:            chainRight
+xcalc*ti.bevel.screen*top:              chainTop
+xcalc*ti.bevel.screen*bottom:           chainBottom
+xcalc*ti.bevel.screen*LCD.foreground:   gray10
+xcalc*ti.bevel.screen*INV.vertDistance: 0
+xcalc*ti.Command.borderColor:           gray65
+xcalc*ti.Command.background:            gray85
+xcalc*ti.Command.foreground:            gray30
+xcalc*ti.button5.background:            rgb:e/b/b
+xcalc*ti.button20.background:           rgb:e/d/c
+xcalc*ti.button25.background:           rgb:e/d/c
+xcalc*ti.button30.background:           rgb:e/d/c
+xcalc*ti.button35.background:           rgb:e/d/c
+xcalc*ti.button40.background:           rgb:b/b/e
+xcalc*ti.button22.background:           gray95
+xcalc*ti.button23.background:           gray95
+xcalc*ti.button24.background:           gray95
+xcalc*ti.button27.background:           gray95
+xcalc*ti.button28.background:           gray95
+xcalc*ti.button29.background:           gray95
+xcalc*ti.button32.background:           gray95
+xcalc*ti.button33.background:           gray95
+xcalc*ti.button34.background:           gray95
+xcalc*ti.button37.background:           gray95
+xcalc*ti.button38.background:           gray95
+xcalc*ti.button39.background:           gray95
+
+xmessage*form.okay.shapeStyle:          rectangle
+xmessage*form.okay.background:          IndianRed
+xmessage*form.okay.foreground:          rgb:e/b/b
+xmessage*message*background:            ivory3
+xmessage*background:                    gray85
+xmessage*foreground:                    gray15
+xmessage*Scrollbar.width:               1
+xmessage*Scrollbar.borderWidth:         0
+xmessage*Text.?.cursorColor:            rgb:d/5/5
+xmessage*Text.borderColor:              gray65
+xmessage*Text*background:               gray95
+xmessage*Command.highlightThickness:    1
+xmessage*Command.internalWidth:         5
+xmessage*Command.internalHeight:        3
+xmessage*Command.borderColor:           gray40
+xmessage*Command.shapeStyle:            Rectangle
+xmessage*Command.background:            gray80
+xmessage*font:                          -*-clean-*-*-*-*-*-*-*-*-*-*-iso8859-2
