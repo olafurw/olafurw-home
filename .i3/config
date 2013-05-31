@@ -145,6 +145,26 @@ bindsym $mod+Shift+I move container to workspace number 18
 bindsym $mod+Shift+O move container to workspace number 19
 bindsym $mod+Shift+P move container to workspace number 20
 
+for_window [class="Eclipse"] move container to workspace "1 : Eclipse"
+for_window [class="Eclipse"] border none
+
+for_window [class="^P4v*"] move container to workspace "2 : Perforce"
+for_window [class="^P4v*"] border none
+
+for_window [class="Firefox"] move container to workspace "3 : Firefox"
+for_window [class="Firefox"] border none
+
+for_window [class="Hamster-time-tracker"] move container to workspace "4 : Hamster"
+for_window [class="Hamster-time-tracker"] border none
+
+for_window [title="rdesktop - maul"] move container to workspace "maul"
+for_window [title="rdesktop - maul"] border none
+
+for_window [class="spotify.bin"] move container to workspace "spotify"
+for_window [class="spotify.bin"] border none
+
+for_window [class="URxvt"] border 1pixel
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
