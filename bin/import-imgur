@@ -1,0 +1,3 @@
+filename=/home/olafurw/Private/imgur/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 32).png
+import $filename
+imgur-upload.sh $filename

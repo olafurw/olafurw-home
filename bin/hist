@@ -1,0 +1,1 @@
+grep --color -ir $1 /home/olafurw/.history
