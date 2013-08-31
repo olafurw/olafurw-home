@@ -1,7 +1,8 @@
 urxvt*font:             xft:terminus:pixelsize=8
 urxvt*boldFont:         xft:terminus:pixelsize=8
 urxvt*termName:         rxvt
-urxvt*background:       #212629
+urxvt*depth:            32
+urxvt*background:       [90]#212629
 urxvt*foreground:       #737c80
 urxvt*scrollBar:        false
 urxvt*matcher.button:   1

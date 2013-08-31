@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/olafurw/workspace/objectcube/ObjectCube/ObjectCube.xcodeproj'
+let g:netrw_dirhist_2='/home/olafurw/workspace/objectcube/PhotoCubeQTGUi'
+let g:netrw_dirhist_3='/home/olafurw/workspace/objectcube/PhotoCubeQTGUi/common'
+let g:netrw_dirhist_4='/home/olafurw/workspace/objectcube/PhotoCubeQTGUi'
+let g:netrw_dirhist_5='/home/olafurw/workspace/objectcube'
