@@ -71,3 +71,15 @@ qwe () {
         fi
     fi
 }
+
+
+# tab completion
+_qwe_aliases(){
+    local cur
+    cur=$2
+    
+    COMPREPLY=( $( grep ^$cur $HOME/.qwe.data | cut -f1 ) )
+    return 0
+}
+
+complete -F _qwe_aliases qwe
