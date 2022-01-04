@@ -5,7 +5,6 @@
 # Name   : qwe.sh
 # Purpose: Command line bookmarks with autocomplete
 # License: GPL v2
-# Package: kfocus-001-main
 #
 # Original concept and code
 #   https://github.com/olafurw/olafurw-home/blob/master/tools/qwe.sh
@@ -26,13 +25,13 @@ _qweEchoTagDataLine () {
   declare _tag_name _esc_str;
   _tag_name="${1:-}";
   _esc_str="$(_qweEscapeRxCharsFn "${_tag_name}")";
-  grep -E "^${_esc_str}"$'\t' "${_dataFile}";
+  grep -E "^${_esc_str}"$'\t' "${_qweDataFile}";
 }
 
 _qweEchoHeadFn () {
   declare _title _arg_str _count _under_str;
   _arg_str="$*";
-  _title="${_baseName} Bookmarks";
+  _title="${_qweBasename} Bookmarks";
 
   if [ -n "${_arg_str}" ]; then
     _title="${_title}: ${_arg_str}";
@@ -58,7 +57,7 @@ _qweEchoMsgFn () {
   if [ -z "${_str}" ]; then
     _qweEchoStderrFn;
   else
-    _qweEchoStderrFn "${_baseName}: ${_str}";
+    _qweEchoStderrFn "${_qweBasename}: ${_str}";
   fi
 }
 
@@ -125,8 +124,6 @@ _qweEchoTagDirFn () {
   if ! _qweChkTagNameFn "${_tag_name}"; then return; fi
 
   _line_str="$(_qweEchoTagDataLine "${_tag_name}")";
-  # _esc_str="$(_qweEscapeRxCharsFn "${_tag_name}")";
-  # _line_str=$(grep -E "^${_esc_str}"$'\t' "${_dataFile}");
   if [ -z "${_line_str}" ]; then
     _qweEchoHeadFn 'ERROR';
     _qweEchoMsgFn  "Tag |${_tag_name}| not found.";
@@ -145,7 +142,7 @@ _qweEchoDirTagFn () {
   _dir_str="${1:-$(pwd)}";
   _esc_str="$(_qweEscapeRxCharsFn "${_dir_str}")";
   _tag_str='';
-  _line_str="$(grep -E $'^[^\t]+\t'"${_esc_str}$" "${_dataFile}")";
+  _line_str="$(grep -E $'^[^\t]+\t'"${_esc_str}$" "${_qweDataFile}")";
 
   if [ -n "${_line_str}" ]; then
     _tag_str="$(echo "${_line_str}" |awk '{print $1}')";
@@ -171,7 +168,7 @@ _qweCompReplyFn () {
   if grep -qv '/' <<<"${_arg_str}"; then
     _esc_str="$(_qweEscapeRxCharsFn "${_arg_str}")";
     IFS=$'\n' read -r -d '' -a COMPREPLY < <(
-      grep -E "^${_esc_str}" "${_dataFile}" | cut -f1 | sed 's/$/\//g'
+      grep -E "^${_esc_str}" "${_qweDataFile}" | cut -f1 | sed 's/$/\//g'
     );
     return;
   fi
@@ -292,7 +289,7 @@ _qweAddTagFn () {
     return 1;
   fi
 
-  echo -e "${_tag_name}\t${_pwd_str}" >> "${_dataFile}";
+  echo -e "${_tag_name}\t${_pwd_str}" >> "${_qweDataFile}";
 }
 ## . END _qweAddTagFn }
 
@@ -312,7 +309,7 @@ _qweDeleteTagFn () {
     return 1;
   fi
 
-  sed -i -e "/^${_tag_name}\\t/d" "${_dataFile}";
+  sed -i -e "/^${_tag_name}\\t/d" "${_qweDataFile}";
 }
 ## . END _qweDeleteTagFn }
 
@@ -321,17 +318,17 @@ _qweDeleteTagFn () {
  #
 _qweEchoHelpFn () {
   1>&2 cat <<_EOH02
-${_baseName}                 : Interactive select directory
-${_baseName}    <tag>[/path] : Change to directory identified by <tag>[/path]
-${_baseName} ~               : Change to user HOME directory
-${_baseName} -               : Change to last 'qwe' directory
-${_baseName} -a <tag>        : Add a <tag> pointing to current directory
-${_baseName} -d <tag>        : Delete <tag>
-${_baseName} -h or -?        : Show this help message
-${_baseName} -l              : Show sorted list of tags
-${_baseName} -p <tag>[/path] : Print the directory identified by <tag>[/path]
-${_baseName} -r <tag> <new>  : Rename <tag> with <new> name
-${_baseName} -s              : Show tag of current directory
+${_qweBasename}                 : Interactive select directory
+${_qweBasename}    <tag>[/path] : Change to directory identified by <tag>[/path]
+${_qweBasename} ~               : Change to user HOME directory
+${_qweBasename} -               : Change to last 'qwe' directory
+${_qweBasename} -a <tag>        : Add a <tag> pointing to current directory
+${_qweBasename} -d <tag>        : Delete <tag>
+${_qweBasename} -h or -?        : Show this help message
+${_qweBasename} -l              : Show sorted list of tags
+${_qweBasename} -p <tag>[/path] : Print the directory identified by <tag>[/path]
+${_qweBasename} -r <tag> <new>  : Rename <tag> with <new> name
+${_qweBasename} -s              : Show tag of current directory
 
 Use <TAB> to autocomplete <tag>[/path].
 '/path' is an optional directory path.
@@ -346,7 +343,7 @@ _qweEchoTagLinesFn () {
   declare _pwd_tag_str _sort_str;
   _pwd_tag_str="$(_qweEchoDirTagFn)";
 
-  _sort_str="$(sort "${_dataFile}")";
+  _sort_str="$(sort "${_qweDataFile}")";
   _qweEchoStderrFn "TAG\tDIRECTORY
 ~\tHome: ${HOME:-Not Available}
 -\tLast: ${_qweLastDirname:-No Last directory}
@@ -410,7 +407,7 @@ _qweRenameTagFn () {
   fi
 
   if sed -i "s/^${_tag_name}"$'\t'"/${_new_name}"$'\t'"/g" \
-    "${_dataFile}"; then
+    "${_qweDataFile}"; then
     _qweEchoMsgFn "Tag |${_tag_name}| renamed to |${_new_name}|\n";
     return;
   fi
@@ -522,9 +519,9 @@ qwe () {
 }
 
 ## BEGIN MAIN {
-_dataFile="${HOME}/.qwe.data";
-_baseName='qwe';
-touch "${_dataFile}";
+_qweDataFile="${HOME}/.qwe.data";
+_qweBasename='qwe';
+touch "${_qweDataFile}";
 
 complete -F _qweCompReplyFn qwe;
 ## END MAIN }
