@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright 2021 Ólafur Waage, Michael Mikowski
+# Copyright 2021-2022 Ólafur Waage, Michael Mikowski
 #
 # Name   : qwe.sh
 # Purpose: Command line bookmarks with autocomplete
@@ -523,5 +523,5 @@ _qweDataFile="${HOME}/.qwe.data";
 _qweBasename='qwe';
 touch "${_qweDataFile}";
 
-complete -F _qweCompReplyFn qwe;
+complete -o nospace -F _qweCompReplyFn qwe;
 ## END MAIN }
