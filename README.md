@@ -6,17 +6,9 @@ Various scripts and settings I have in my home folder.
 tools/qwe.sh
 ------------
 
-A tool to bookmark the current folder you are in. Stores a list of folders in a dot file in your home directory. You bookmark the folder by giving it a short tag, then you can travel to it by using the tag. Just add `source qwe.sh` to your `.bashrc` or other profile dot-files to make it work.
+The comnand line bookmarking tool qwe has it's own repository now. The original file is kept here for posterity.
 
-```sh
-Usage:
-qwe name : Traverse to directory tagged name
-qwe -h : Help
-qwe -l : List of saved tags
-qwe -a name : Add a tag called name with the current folder
-qwe -d name : Remove a tag called name
-qwe -p name : Print the directory tagged with name
-```
+https://github.com/olafurw/qwe
 
 tools/extract.sh
 ----------------
